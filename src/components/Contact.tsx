@@ -46,11 +46,11 @@ const Contact = () => {
             </p>
             <div className="space-y-4 pt-2">
               <a
-                href="mailto:venkatesh20@gmail.com"
+                href="mailto:venkateshparuchuri20@gmail.com"
                 className="flex items-center gap-3 text-sm text-muted-foreground hover:text-primary transition-colors"
               >
                 <Mail size={18} />
-                venkatesh20@gmail.com
+                venkateshparuchuri20@gmail.com
               </a>
               <a
                 href="#"
