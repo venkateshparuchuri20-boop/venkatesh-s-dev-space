@@ -59,7 +59,7 @@ const Contact = () => {
                 className="flex items-center gap-3 text-sm text-muted-foreground hover:text-primary transition-colors"
               >
                 <Github size={18} />
-                github.com/your-username
+                github.com/venkatesh-paruchuri
               </a>
               <a
                 href="#"
