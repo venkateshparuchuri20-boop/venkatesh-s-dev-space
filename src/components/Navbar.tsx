@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 
 const navLinks = [
@@ -10,6 +11,7 @@ const navLinks = [
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
 
   const handleClick = (href: string) => {
     setIsOpen(false);
@@ -39,6 +41,12 @@ const Navbar = () => {
                 {link.label}
               </button>
             ))}
+            <button
+              onClick={() => navigate("/planner")}
+              className="text-sm font-medium bg-primary text-primary-foreground px-4 py-2 rounded-md hover:bg-primary/90 transition-colors"
+            >
+              Planner
+            </button>
           </div>
 
           {/* Mobile toggle */}
@@ -64,8 +72,14 @@ const Navbar = () => {
               >
                 {link.label}
               </button>
-            ))}
-          </div>
+             ))}
+             <button
+               onClick={() => { setIsOpen(false); navigate("/planner"); }}
+               className="block w-full text-left text-sm font-medium bg-primary text-primary-foreground px-4 py-2 rounded-md"
+             >
+               Planner
+             </button>
+           </div>
         </div>
       )}
     </nav>

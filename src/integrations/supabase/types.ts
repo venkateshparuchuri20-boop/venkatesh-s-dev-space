@@ -14,7 +14,99 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      daily_progress: {
+        Row: {
+          completed_tasks: number
+          created_at: string
+          id: string
+          progress_date: string
+          total_tasks: number
+          total_time_minutes: number
+          user_id: string
+          work_logged: boolean
+        }
+        Insert: {
+          completed_tasks?: number
+          created_at?: string
+          id?: string
+          progress_date?: string
+          total_tasks?: number
+          total_time_minutes?: number
+          user_id: string
+          work_logged?: boolean
+        }
+        Update: {
+          completed_tasks?: number
+          created_at?: string
+          id?: string
+          progress_date?: string
+          total_tasks?: number
+          total_time_minutes?: number
+          user_id?: string
+          work_logged?: boolean
+        }
+        Relationships: []
+      }
+      daily_tasks: {
+        Row: {
+          completed_at: string | null
+          created_at: string
+          description: string | null
+          id: string
+          is_completed: boolean
+          task_date: string
+          time_spent_minutes: number | null
+          title: string
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          completed_at?: string | null
+          created_at?: string
+          description?: string | null
+          id?: string
+          is_completed?: boolean
+          task_date?: string
+          time_spent_minutes?: number | null
+          title: string
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          completed_at?: string | null
+          created_at?: string
+          description?: string | null
+          id?: string
+          is_completed?: boolean
+          task_date?: string
+          time_spent_minutes?: number | null
+          title?: string
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
+      profiles: {
+        Row: {
+          created_at: string
+          display_name: string | null
+          id: string
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          display_name?: string | null
+          id?: string
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          display_name?: string | null
+          id?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
